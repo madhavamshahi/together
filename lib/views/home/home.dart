@@ -12,7 +12,9 @@ import 'package:filter_list/filter_list.dart';
 import 'package:together/models/userModel.dart';
 import 'package:together/services/geoService.dart';
 import 'package:geolocator/geolocator.dart';
+import '../article/articleview.dart';
 import '../widgets/sameBox.dart';
+import '../widgets/userProfileView.dart';
 
 List<String> selectedList = ["Maths"];
 
@@ -253,24 +255,7 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      Center(
-        child: Text(
-          'Home',
-          style: optionStyle,
-        ),
-      ),
-      Center(
-        child: Text(
-          'Search',
-          style: optionStyle,
-        ),
-      ),
-      Center(
-        child: Text(
-          'Profile',
-          style: optionStyle,
-        ),
-      ),
+      UserProfileView(),
     ];
 
     return SideMenu(
@@ -319,16 +304,6 @@ class _HomeState extends State<Home> {
                     icon: FontAwesomeIcons.house,
                     text: 'Home',
                     iconColor: Colors.orange,
-                  ),
-                  GButton(
-                    icon: FontAwesomeIcons.heart,
-                    iconColor: Colors.orange,
-                    text: 'Likes',
-                  ),
-                  GButton(
-                    icon: FontAwesomeIcons.searchengin,
-                    iconColor: Colors.orange,
-                    text: 'Search',
                   ),
                   GButton(
                     icon: FontAwesomeIcons.user,

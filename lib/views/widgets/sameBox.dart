@@ -96,8 +96,8 @@ class SameBox extends StatelessWidget {
 }
 
 _launchURL(String phn) async {
-  String url = 'sms:$phn';
-  if (await canLaunch(url)) {
+  String url = 'mailto:$phn?';
+  if (true) {
     await launch(url);
   } else {
     throw 'Could not launch $url';

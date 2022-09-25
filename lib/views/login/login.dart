@@ -9,7 +9,7 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  String major = "Cough";
+  String major = "Stomach Flu";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class _LoginViewState extends State<LoginView> {
                   children: [
                     SizedBox(height: 100),
                     Text(
-                      'Ed-Buddy',
+                      'Together ❤️',
                       style: GoogleFonts.rubik(
                         textStyle: TextStyle(
                           fontSize: 32,
@@ -36,7 +36,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'Your partner in studies',
+                      "We're in this together",
                       style: GoogleFonts.josefinSans(
                         textStyle: TextStyle(
                           fontSize: 25,
@@ -44,21 +44,26 @@ class _LoginViewState extends State<LoginView> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 100),
-                    Image.asset(
-                      'assets/images/illus6.png',
-                      height: 200,
+                    SizedBox(height: 60),
+                    CircleAvatar(
+                      radius: 100,
+                      backgroundImage: NetworkImage(
+                          "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif"),
                     ),
-                    Text(
-                      'Login to continue',
-                      style: GoogleFonts.josefinSans(
-                        textStyle: TextStyle(
-                          fontSize: 32,
-                          color: Colors.white,
+                    SizedBox(height: 20),
+                    Container(
+                      margin: EdgeInsets.all(20),
+                      child: Text(
+                        "Please select the medical treatment you're looking for your child.",
+                        style: GoogleFonts.josefinSans(
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 35),
+                    SizedBox(height: 12),
                     Container(
                       margin: EdgeInsets.all(20),
                       child: DropdownSearch<String>(
